@@ -33,6 +33,8 @@ angular
 
 	    'DETAIL'					: 'Lucene Lanches - Detalhamento do Pedido',
 	    'HELLO'						: 'Olá: ',
+	    'DESC_ADRESS'			: 'Seu Pedido será entregue: ',
+	    'DESC_CONTACT'		: 'Qualquer dificuldade entraremos em contato: ',
 	    'DESC_VALUE_ORDER': 'O valor total do seu pedido é de ',
 	    'PAYMENT'					: 'Qual a forma de pagamento?',
 	    'CREDIT'					: 'Crédito',
@@ -91,6 +93,8 @@ angular
 
 	    'DETAIL'					: 'Lucene Snacks - Order Detail',
 	    'HELLO'						: 'Hello:',
+	    'DESC_ADRESS'			: 'Your order will be delivered: ',
+	    'DESC_CONTACT'		: 'Any difficulty we will contact: ',
 	    'DESC_VALUE_ORDER': 'The total value of your order is ',
 	    'PAYMENT'					: 'What is the payment method?',
 	    'CREDIT'					: 'Credit',
@@ -113,7 +117,7 @@ angular
 	    'MSG01'						: 'This fields is required.',
 	    'MSG02'						: 'At least one snack must be selected for the order.'
 	  });
-	 
+
 	  $translateProvider.preferredLanguage('pt');
 	}])
 
@@ -126,10 +130,6 @@ angular
 	    description: '{{ MSG01 | translate }}',
 	  };
 
-	  /*$scope.doSubmit = function () {
-    			
-  	};
-*/
 		var mappingCategoria = {
 			"Tipo de pão" : "bread",
 			"Queijo"      : "cheese",
@@ -165,7 +165,7 @@ angular
  			$translate.use(to);
  		};
 
- 		$scope.add = function(data) {
+ 		$scope.addSnack = function(data) {
  			// if ($scope.list.length < 2) {
 	 		// 	$scope.list.push(data);
  			// }
@@ -333,6 +333,20 @@ angular
 			// }
  		}
 
+	$scope.doSubmit = function (data) {
+    console.log(data);
+    $scope.addSnack(data)
+  };
+
+  $scope.doOrder = function ($event, list) {
+  	console.log(list)
+  	if (list == '' || list == null) {
+  		alert("Ao menos um lanche deve ser selecionado para o pedido.\nAt least one snack must be selected for the order.");
+  	} else {
+
+    	$scope.showAdvanced($event, list);
+  	}
+  };
 
 
 

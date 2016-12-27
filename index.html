@@ -1,20 +1,18 @@
 <!DOCTYPE html>
 <html ng-app="appSnack">
 <head>
-	<meta charset="UTF-8">	
+  <meta charset="UTF-8">  
 
-	<title>{{ 'TITLESITE' | translate }}</title>
+  <title>{{ 'TITLESITE' | translate }}</title>
 
-	<link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/angular_material/1.1.0/angular-material.min.css">
-	<link href="css/material.css" rel="stylesheet">
+  <link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/angular_material/1.1.0/angular-material.min.css">
+  <link href="css/material.css" rel="stylesheet">
 
 </head>
 
 <body class="material-body" layout="row" ng-cloak ng-controller="CtrlSnacks">
 
-	<md-sidenav class="site-sidenav md-sidenav-left md-whiteframe-z2"
-              md-component-id="left" hide-print
-              md-is-locked-open="$mdMedia('gt-sm')">
+  <md-sidenav class="site-sidenav md-sidenav-left md-whiteframe-z2" md-component-id="left" hide-print md-is-locked-open="$mdMedia('gt-sm')">
 
     <header class="nav-header">
       <a href="#" class="material-logo">
@@ -25,54 +23,54 @@
 
     <md-content flex role="navigation">
       <ul class="material-menu">
-      	<li class="parent-list-item"></li>
-		    <li class="parent-list-item">
-		    	<a href="#">
-		    		<h2 class="menu-heading md-subhead">
-		    			<span>&nbsp;&nbsp;{{ 'MENU' | translate }}</span>
-		    		</h2>
-		    	</a>
-		    </li>
-		    <li class="parent-list-item">
-		    	<a href="#">
-		    		<h2 class="menu-heading md-subhead">
-		    			<span>
-		    				<img src="img/home.svg" alt="Home" class="icon">
-		    			</span>
-		    			<span>&nbsp;&nbsp;{{ 'HOME' | translate }}</span>
-		    		</h2>
-		    	</a>
-		    </li>
-		    <li class="parent-list-item">
-		    	<a href="#">
-		    		<h2 class="menu-heading md-subhead">
-		    			<span>
-		    				<img src="img/snacks.svg" alt="Lanches" class="icon">
-		    			</span>
-		    			<span>&nbsp;&nbsp;{{ 'ORDER' | translate }}</span>
-		    		</h2>
-		    	</a>
-		    </li>
-		    <li class="parent-list-item">
-		    	<a href="#">
-		    		<h2 class="menu-heading md-subhead">
-		    			<span>
-		    				<img src="img/lista.svg" alt="Visualizar Pedido" class="icon">
-		    			</span>
-		    			<span>&nbsp;&nbsp;{{ 'VIEW_ORDER' | translate }}</span>
-		    		</h2>
-		    	</a>
-		    </li>
-		    <li class="parent-list-item">
-		    	<!-- <a href="#">
-		    		<h2 class="menu-heading md-subhead">
-		    			<span>
-		    				<img src="img/listManage.svg" alt="Gerenciar Pedidos" class="icon">
-		    			</span>
-		    			<span>&nbsp;&nbsp;Gerenciar Pedidos</span>
-		    		</h2>
-		    	</a> -->
-		    </li>
+        <li class="parent-list-item"></li>
+        <li class="parent-list-item">
+          <a href="#">
+            <h2 class="menu-heading md-subhead">
+              <span>&nbsp;&nbsp;{{ 'MENU' | translate }}</span>
+            </h2>
+          </a>
+        </li>
+        <li class="parent-list-item">
+          <a href="#">
+            <h2 class="menu-heading md-subhead">
+              <span>
+                <img src="img/home.svg" alt="Home" class="icon">
+              </span>
+              <span>&nbsp;&nbsp;{{ 'HOME' | translate }}</span>
+            </h2>
+          </a>
+        </li>
+        <li class="parent-list-item">
+          <a href="#">
+            <h2 class="menu-heading md-subhead">
+              <span>
+                <img src="img/snacks.svg" alt="Lanches" class="icon">
+              </span>
+              <span>&nbsp;&nbsp;{{ 'ORDER' | translate }}</span>
+            </h2>
+          </a>
+        </li>
+        <li class="parent-list-item">
+          <a href="#">
+            <h2 class="menu-heading md-subhead">
+              <span>
+                <img src="img/lista.svg" alt="Visualizar Pedido" class="icon">
+              </span>
+              <span>&nbsp;&nbsp;{{ 'VIEW_ORDER' | translate }}</span>
+            </h2>
+          </a>
+        </li>
+        <li class="parent-list-item">
+          <a href="#">
+            <h2 class="menu-heading md-subhead">
+              <span>
+                <img src="img/listManage.svg" alt="Gerenciar Pedidos" class="icon">
+              </span>
+              <span>&nbsp;&nbsp;Gerenciar Pedidos</span>
+            </h2>
+          </a>
+        </li>
       </ul>
     </md-content>
   </md-sidenav>
@@ -86,319 +84,315 @@
             <span hide-sm hide-md>{{ 'TITLE' | translate }}</span>
           </h2>
         </div>
-	       <div class="md-toolbar-item docs-tools" layout="row">
-		       	<span ng-click="changeTranslate('pt')">
-		      		<img src="img/br.png" alt="{{ 'BT_LING_PT' | translate }}" class="iconLanguage">
-		       	</span>
-		       	<span ng-click="changeTranslate('en')">
-		      		<img src="img/usa.png" alt="{{'BT_LING_EN' | translate }}" class="iconLanguage">
-		       	</span>
-		      	<!-- <md-button class="md-primary md-raised" ng-click="changeTranslate('pt')" >
-		      			{{ 'BT_LING_PT' | translate }}
-		      	</md-button>
-
-		      	<md-button class="md-primary md-raised" ng-click="changeTranslate('en')">
-			      {{'BT_LING_EN' | translate }}
-			    </md-button> -->
-			</div>
+        <div class="md-toolbar-item docs-tools" layout="row">
+          <span ng-click="changeTranslate('pt')">
+            <img src="img/br.png" alt="{{ 'BT_LING_PT' | translate }}" class="iconLanguage">
+          </span>
+          <span ng-click="changeTranslate('en')">
+            <img src="img/usa.png" alt="{{'BT_LING_EN' | translate }}" class="iconLanguage">
+          </span>
+        </div>
       </div>
       
     </md-toolbar>
 
     <md-content md-scroll-y layout="column" flex>
-    <form name="validatorForm">
       <div layout-padding flex="noshrink" class="material-ng-view">
-      	<div layout="row" layout-wrap flex="100">
-	      	<div layout="row" layout-wrap flex="100">
+        <div layout="row" layout-wrap flex="100">
+          <form name="validatorForm" ng-submit="doSubmit(data)">
+            <div layout="row" layout-wrap flex="100">
 
-					  <div flex="100">
-	      			<h2>{{ 'PERSONAL_DATA' | translate }}</h2>
-	      		</div>
-	      		<div flex="50">
-	      			<md-input-container class="md-block">
-						        <label>{{ 'NAME' | translate }}</label>
-						        <input md-maxlength="75" required md-no-asterisk name="name" ng-model="name" >
-						        <div ng-messages="validatorForm.name.$error">
-						          <div ng-message="required">{{ 'MSG01' | translate }}</div>
-						          <div ng-message="md-maxlength">{{ 'MSG01' | translate }}</div>
-						        </div>
-						      </md-input-container>
-						  </div>
-						  <div flex="50">
-						  	<md-input-container class="md-block">
-					        <label>{{ 'ADRESS' | translate }}</label>
-					        <input md-maxlength="100" required md-no-asterisk name="address" ng-model="address" >
-					        <div ng-messages="validatorForm.address.$error">
-					          <div ng-message="required">{{ 'MSG01' | translate }}</div>
-					          <div ng-message="md-maxlength">{{ 'MSG01' | translate }}</div>
-					        </div>
-					      </md-input-container>
-	      		 
-					  </div>
-					  <div flex="50"> 
-					    <md-input-container md-no-float class="md-block">
-					    	<label>{{ 'PHONE' | translate }}</label>
-					      <!-- <md-icon md-svg-src="img/icons/ic_phone_24px.svg"></md-icon> -->
-					      <input ng-model="user.phone" type="text">
-					    </md-input-container>
-					  </div>
-					  <div flex="50">
-					    <md-input-container md-no-float class="md-block">
-					    	<label>{{ 'EMAIL' | translate }}</label>
-					      <!-- <md-icon md-svg-src="img/icons/ic_email_24px.svg" class="email"></md-icon> -->
-					      <input ng-model="user.email" type="email">
-					    </md-input-container>
-					  </div>
-					</div>
-					<div layout="row" layout-wrap flex="50">
+              <div flex="100">
+                <h2>{{ 'PERSONAL_DATA' | translate }}</h2>
+              </div>
+              
+              <div flex="50">
+                <md-input-container class="md-block">
+                    <label>{{ 'NAME' | translate }}</label>
+                    <input md-maxlength="75" required md-no-asterisk name="name" ng-model="name" >
+                    <div ng-messages="validatorForm.name.$error">
+                      <div ng-message="required">{{ 'MSG01' | translate }}</div>
+                      <div ng-message="md-maxlength">{{ 'MSG01' | translate }}</div>
+                    </div>
+                </md-input-container>
+              </div>
 
-						<div flex="100" layout="row" layout-wrap >
-							<div flex="100">
-								<h3>{{ 'SELECT_SNACK' | translate }}:</h3>
-							</div>
-							<div flex="100" layout="row" layout-wrap name="snacklist" >
-					      <md-card md-theme-watch flex="45" ng-repeat="snack in snacks" >
-					        <md-card-title>
-					          <md-card-title-text>
-					            <span class="md-headline" ng-model="data.snack">{{ snack.nome }}</span>
-					            <span class="md-subhead">{{ snack.total | currency: 'R$'}}</span>
-					          </md-card-title-text>
-					          <md-card-title-media>
-					            <div class="md-media-sm card-media"></div>
-					          </md-card-title-media>
-					        </md-card-title>
-					        <md-card-actions layout="row" layout-align="end center">
-					          <md-button name="Show" ng-click="add(snack)">{{ 'ADD' | translate }}</md-button>
-					          <md-button name="Per" ng-click="listingredientes(snack)">{{ 'PERSONALIZE' | translate }}</md-button>
-					        </md-card-actions>
-					      </md-card>
-					    </div>
-					  </div>
+              <div flex="50">
+                <md-input-container class="md-block">
+                  <label>{{ 'ADRESS' | translate }}</label>
+                  <input md-maxlength="100" required md-no-asterisk name="address" ng-model="address" >
+                  <div ng-messages="validatorForm.address.$error">
+                    <div ng-message="required">{{ 'MSG01' | translate }}</div>
+                    <div ng-message="md-maxlength">{{ 'MSG01' | translate }}</div>
+                  </div>
+                </md-input-container>
+              </div>
 
-					  <div flex="100" layout="row" layout-wrap >
-					  	<form name="mainForm" ng-submit="send()">
+              <div flex="50"> 
+                <md-input-container md-no-float class="md-block">
+                  <label>{{ 'PHONE' | translate }}</label>
+                  <!-- <md-icon md-svg-src="img/icons/ic_phone_24px.svg"></md-icon> -->
+                  <input ng-model="phone" type="text">
+                </md-input-container>
+              </div>
 
-							<div flex="100">
-								<h2>{{ 'MOUNT_SNACK' | translate }}</h2>
-							</div>
-							<div flex="50">
+              <div flex="50">
+                <md-input-container md-no-float class="md-block">
+                  <label>{{ 'EMAIL' | translate }}</label>
+                  <!-- <md-icon md-svg-src="img/icons/ic_email_24px.svg" class="email"></md-icon> -->
+                  <input ng-model="email" type="email">
+                </md-input-container>
+              </div>
+            </div>
+
+            <div layout="row" layout-wrap flex="100">
+
+              <div flex="100" layout="row" layout-wrap >
+                <div flex="100">
+                  <h3>{{ 'SELECT_SNACK' | translate }}:</h3>
+                </div>
+                <div flex="100" layout="row" layout-wrap name="snacklist" >
+                  <md-card md-theme-watch flex="45" ng-repeat="snack in snacks" >
+                    <md-card-title>
+                      <md-card-title-text>
+                        <span class="md-headline" ng-model="data.snack">{{ snack.nome }}</span>
+                        <span class="md-subhead">{{ snack.total | currency: 'R$'}}</span>
+                      </md-card-title-text>
+                      <md-card-title-media>
+                        <div class="md-media-sm card-media"></div>
+                      </md-card-title-media>
+                    </md-card-title>
+                    <md-card-actions layout="row" layout-align="end center">
+                      <md-button name="Show" ng-click="add(snack)">{{ 'ADD' | translate }}</md-button>
+                      <md-button name="Per" ng-click="listingredientes(snack)">{{ 'PERSONALIZE' | translate }}</md-button>
+                    </md-card-actions>
+                  </md-card>
+                </div>
+              </div>
+
+              <div flex="100" layout="row" layout-wrap >
+              
+                <div flex="100">
+                  <h2>{{ 'MOUNT_SNACK' | translate }}</h2>
+                </div>
+
+                <div flex="50">
+
+                  <md-input-container class="md-icon-float md-block">
+                    <label>{{ 'SNACK_NAME' | translate }}</label>
+                    <!-- <md-icon md-svg-src="img/user.svg" class="name"></md-icon> -->
+                    <input ng-model="data.snack" type="text" ng-required="true" >
+                  </md-input-container>
+
+                  <md-input-container class="md-block" flex-gt-sm>
+                    <label>{{ 'TYPE_BREAD' | translate }}:</label>
+                    <md-select ng-model="data.bread" id="tipopao" ng-required="true" >
+                      <md-option ng-repeat="bread in breads" ng-click="calcValueIngredientes('bread', bread)" value="{{ bread.nome }}">
+                        {{ bread.nome }}
+                      </md-option>
+                    </md-select>
+                  </md-input-container>
+
+                  <md-input-container class="md-block" flex-gt-sm>
+                    <label>{{ 'TYPE_CHEESE' | translate }}:</label>
+                    <md-select ng-model="data.cheese">
+                      <md-option ng-repeat="cheese in cheeses" ng-click="calcValueIngredientes('cheese', cheese)" value="{{ cheese.nome }}">
+                        {{ cheese.nome }}
+                      </md-option>
+                    </md-select>
+                  </md-input-container>
+
+                  <md-input-container class="md-block" flex-gt-sm>
+                    <label>{{ 'FILLING' | translate }}:</label>
+                    <md-select ng-model="data.filling" >
+                      <md-option ng-repeat="filling in fillings" value="{{ filling.nome }}" ng-click="calcValueIngredientes('filling', filling)">
+                        {{ filling.nome }}
+                      </md-option>
+                    </md-select>
+                  </md-input-container>  
+                </div>
+                <div flex="100">
+                  <md-radio-group ng-model="data.salad">
+                    <br />
+                    <label>{{ 'SALAD' | translate }}:</label>
+                    <br /><br />
+                    <md-radio-button value="{{ salad.nome }}" ng-required="true" ng-repeat=" salad in salads" class="md-primary" ng-click="calcValueIngredientes('salad', salad)">{{ salad.nome }}
+                    </md-radio-button>
+                  </md-radio-group>
+                  <!-- <label>Salada:</label>
+                    <br /><br />
+                    <md-checkbox ng-model="data.salad[$index]" md-no-ink aria-label="Molhos:" value='{{ salad.nome }}' class="md-primary" ng-repeat=" salad in salads" ng-change="show(data)">
+                     {{ salad.nome }}
+                  </md-checkbox> -->
+                </div>
+                
+                <div flex-gt-sm="100" name="saucelist" ng-model="data.sauce" >
+                  <br />
+                  <label>{{ 'TYPE_SAUCE' | translate }}:</label>
+                  <br /><br />
+                  <md-checkbox md-no-ink aria-label="Molhos:" value='{{ sauce.nome }}' class="md-primary" ng-repeat=" sauce in sauces">
+                   {{ sauce.nome }}
+                  </md-checkbox>
+                </div>
+
+                <div flex-gt-sm="100" name="spicelist" ng-model="data.spice" >
+                  <br />
+                  <label>{{ 'SPICE' | translate }}: </label>
+                  <br /><br />
+                  <md-checkbox md-no-ink aria-label="Temperos:" class="md-primary" value='{{ spice.nome }}' ng-repeat=" spice in spices">
+                   {{ spice.nome }}
+                  </md-checkbox>
+                </div>
+
+              </div>
+
+              <div flex-gt-sm="100">
+
+                <md-input-container class="md-icon-float md-icon-right md-block" flex-gt-sm="100">
+                  <label>{{ 'VALUE_SNACK' | translate }}</label>
+                  <!-- <md-icon md-svg-src="img/icons/ic_card_giftcard_24px.svg"></md-icon> -->
+                  <input disable type="text" value="{{ valorTotal | currency: 'R$'}}" disabled>
+                  <!-- <md-icon md-svg-src="img/icons/ic_euro_24px.svg"></md-icon> -->
+                </md-input-container>
+
+                <md-button type="submit" class="md-primary md-raised">
+                  {{ 'SAVE' | translate }}
+                </md-button>
+              </div>
+            </div>
+          </form>
+          <hr />
+          <div layout="column" layout-wrap flex="100">
+            <form name="orderForm" ng-submit="doOrder($event, list)">
+              <div flex="100" layout-align="right">
+
+                  <label>{{ 'SNACK_SELECT' | translate }}</label>
+
+                  <ol>
+                    <li ng-repeat="item in list track by $index" ng-required="true">
+                      <span>{{ item.snack }} - ({{ item.valor | currency: 'R$' }})</span>
+                      <span ng-click="remoreItemList($index, item)">
+                            <img src="img/delete.svg" class="icon">
+                          </span>
+                    </li>
+                  </ol>
 
 
-	      		 <md-input-container class="md-icon-float md-block">
-					      <label>{{ 'SNACK_NAME' | translate }}</label>
-					      <!-- <md-icon md-svg-src="img/user.svg" class="name"></md-icon> -->
-					      <input ng-model="data.snack" type="text" ng-required="true" >
-					    </md-input-container>
 
+                <md-input-container class="md-icon-float md-icon-right md-block" flex-gt-sm="100">
+                  <label>{{ 'VALUE_ORDER' | translate }}</label>
+                  <!-- <md-icon md-svg-src="img/icons/ic_card_giftcard_24px.svg"></md-icon> -->
+                  <input type="text" value="{{ valueSnack | currency: 'R$'}}" disabled>
+                  <!-- <md-icon md-svg-src="img/icons/ic_euro_24px.svg"></md-icon> -->
+                </md-input-container>
 
-						<md-input-container class="md-block" flex-gt-sm>
-			            <label>{{ 'TYPE_BREAD' | translate }}</label>
-			            <md-select ng-model="data.bread" id="tipopao" ng-required="true" >
-			              <md-option ng-repeat="bread in breads" ng-click="calcValueIngredientes('bread', bread)" value="{{ bread.nome }}">
-			                {{ bread.nome }}
-			              </md-option>
-			            </md-select>
-
-			          </md-input-container>
-
-			          <md-input-container class="md-block" flex-gt-sm>
-			            <label>{{ 'TYPE_CHEESE' | translate }}</label>
-			            <md-select ng-model="data.cheese">
-			              <md-option ng-repeat="cheese in cheeses" ng-click="calcValueIngredientes('cheese', cheese)" value="{{ cheese.nome }}">
-			                {{ cheese.nome }}
-			              </md-option>
-			            </md-select>
-			          </md-input-container>
-
-			          <md-input-container class="md-block" flex-gt-sm>
-			            <label>{{ 'FILLING' | translate }}</label>
-			            <md-select ng-model="data.filling" >
-			              <md-option ng-repeat="filling in fillings" value="{{ filling.nome }}" ng-click="calcValueIngredientes('filling', filling)">
-			                {{ filling.nome }}
-			              </md-option>
-			            </md-select>
-			          </md-input-container>
-
-								<!-- <p>Selected Value: <span class="radioValue">{{ data.salad }}</span> </p> -->
-						</div>
-						<div flex="100">
-								<md-radio-group ng-model="data.salad">
-									<br />
-							 		<label>{{ 'SALAD' | translate }}:</label>
-							 		<br /><br />
-						      <md-radio-button value="{{ salad.nome }}" ng-required="true" ng-repeat=" salad in salads" class="md-primary" ng-click="calcValueIngredientes('salad', salad)">{{ salad.nome }}
-						    </md-radio-button>
-
-						    </md-radio-group>
-						    <!-- <label>Salada:</label>
-							 		<br /><br />
-				          <md-checkbox ng-model="data.salad[$index]" md-no-ink aria-label="Molhos:" value='{{ salad.nome }}' class="md-primary" ng-repeat=" salad in salads" ng-change="show(data)">
-				           {{ salad.nome }}
-				          </md-checkbox> -->
-
-								
-							 <div flex-gt-sm="100" name="saucelist" ng-model="data.sauce" >
-							 		<br />
-							 		<label>{{ 'TYPE_SAUCE' | translate }}:</label>
-							 		<br /><br />
-				          <md-checkbox md-no-ink aria-label="Molhos:" value='{{ sauce.nome }}' class="md-primary" ng-repeat=" sauce in sauces">
-				           {{ sauce.nome }}
-				          </md-checkbox>
-					     </div>
-
-					     <div flex-gt-sm="100" name="spicelist" ng-model="data.spice" >
-							 		<br />
-							 		<label>{{ 'SPICE' | translate }}: </label>
-							 		<br /><br />
-				          <md-checkbox md-no-ink aria-label="Temperos:" class="md-primary" value='{{ spice.nome }}' ng-repeat=" spice in spices">
-				           {{ spice.nome }}
-				          </md-checkbox>
-					     </div>
-
-						</div>
-							
-
-
-
-							<md-input-container class="md-icon-float md-icon-right md-block" flex-gt-sm="100">
-					      <label>{{ 'VALUE_SNACK' | translate }}</label>
-					      <!-- <md-icon md-svg-src="img/icons/ic_card_giftcard_24px.svg"></md-icon> -->
-					      <input disable type="text" value="{{ valorTotal | currency: 'R$'}}" disabled>
-					      <!-- <md-icon md-svg-src="img/icons/ic_euro_24px.svg"></md-icon> -->
-					    </md-input-container>
-
-					    <md-button class="md-primary md-raised" ng-click="add(data)">
-				      {{ 'SAVE' | translate }}
-				    </md-button>
-
-				  </div>
-				</div>
-			  <div layout="row" layout-wrap flex="50">
-				  <div flex="50">
-				  	<label>{{ 'SNACK_SELECT' | translate }}</label>
-				    <ol>
-							<li ng-repeat="item in list track by $index">
-								<span>{{ item.snack }} - ({{ item.valor | currency: 'R$' }})</span>
-								<span ng-click="remoreItemList($index, item)">
-						      		<img src="img/delete.svg" class="icon">
-						       	</span>
-							</li>
-						</ol>
-
-						<md-input-container class="md-icon-float md-icon-right md-block" flex-gt-sm="100">
-				      <label>{{ 'VALUE_ORDER' | translate }}</label>
-				      <!-- <md-icon md-svg-src="img/icons/ic_card_giftcard_24px.svg"></md-icon> -->
-				      <input type="text" value="{{ valueSnack | currency: 'R$'}}" disabled>
-				      <!-- <md-icon md-svg-src="img/icons/ic_euro_24px.svg"></md-icon> -->
-				    </md-input-container>
-
-						<md-button class="md-primary md-raised" ng-click="showAdvanced($event, list)">
-				      {{ 'SUBMIT' | translate }}
-				    </md-button>
-				  </div>
-				</div>
+                <md-button type="submit" class="md-primary md-raised">
+                  {{ 'SUBMIT' | translate }}
+                </md-button>
+              </div>
+            </form>
+          </div>
+        </div>
       </div>
-    </form>
+        
 
       <div style="visibility: hidden">
-			  <div class="md-dialog-container" id="DetailOrder">
-		      <md-dialog aria-label="Lucene Lanches - Detalhamento do Pedido">
-					  <form ng-cloak>
-					    <md-toolbar>
-					      <div class="md-toolbar-tools">
-					        <h2>{{ 'DETAIL' | translate }}</h2>
-					        <span flex></span>
-					        <md-button class="md-icon-button" ng-click="cancel()">
-					          <!-- <md-icon md-svg-src="img/icons/ic_close_24px.svg" aria-label="Close dialog"></md-icon> -->
-					        </md-button>
-					      </div>
-					    </md-toolbar>
+        <div class="md-dialog-container" id="DetailOrder">
+          <md-dialog aria-label="Lucene Lanches - Detalhamento do Pedido">
+            <form ng-cloak>
+              <md-toolbar>
+                <div class="md-toolbar-tools">
+                  <h2>{{ 'DETAIL' | translate }}</h2>
+                  <span flex></span>
+                  <md-button class="md-icon-button" ng-click="cancel()">
+                    <!-- <md-icon md-svg-src="img/icons/ic_close_24px.svg" aria-label="Close dialog"></md-icon> -->
+                  </md-button>
+                </div>
+              </md-toolbar>
 
-					    <md-dialog-content>
-					      <div class="md-dialog-content">
-					      	<div layout="row" layout-wrap flex="100">
-					        	<h2>{{ 'DETAIL' | translate }}</h2>
-					        </div>
-					        <div layout="row" layout-wrap flex="100">
-									  <div flex="100">
-									    {{ 'HELLO' | translate }} {{ name }}
-									    <br /><br />
-									    <span ng-model="valueSnack">{{ 'DESC_VALUE_ORDER' | translate }} {{ valueSnack | currency: 'R$'}}</span>
-									    <br /><br />
-									    <md-radio-group>
-												<br />
-										 		<label>{{ 'PAYMENT' | translate }}?</label>
-										 		<br /><br />
-									      <md-radio-button value="credito" ng-required="true" class="md-primary">{{ 'CREDIT' | translate }}</md-radio-button>
-									      <md-radio-button value="debito" ng-required="true" class="md-primary">{{ 'DEBIT' | translate }}</md-radio-button>
-									      <md-radio-button value="dinheiro" ng-required="true" class="md-primary">{{ 'MONEY' | translate }}</md-radio-button>
-								    	</md-radio-group>
-								    	<md-radio-group>
-												<br />
-										 		<label>{{ 'RETURN' | translate }}</label>
-										 		<br /><br />
-									      <md-radio-button value="Sim" ng-required="true">{{ 'YES' | translate }}</md-radio-button>
-									      <md-radio-button value="Não" ng-required="true">{{ 'NO' | translate }}</md-radio-button>
-								    	</md-radio-group>
-									  </div>
-									</div>
-									<div layout="column" layout-wrap flex="100">
-									  <div flex="100">
-									    <span>{{ 'PROGRESS_ORDER' | translate }}</span><br /><br />
-									    <span>{{ 'CALC' | translate }}</span> <br /><br />
+              <md-dialog-content>
+                <div class="md-dialog-content">
+                  <div layout="row" layout-wrap flex="100">
+                    <h2>{{ 'DETAIL' | translate }}</h2>
+                  </div>
+                  <div layout="row" layout-wrap flex="100">
+                    <div flex="100">
+                      <span>{{ 'HELLO' | translate }} {{ name }}</span>
+                      <br /><br />
+                      <span ng-model="valueSnack">{{ 'DESC_VALUE_ORDER' | translate }} {{ valueSnack | currency: 'R$'}}</span>
+                      <br /><br />
+                      <span>{{ 'DESC_ADRESS' | translate }} {{ address }}</span>
+                      <br /><br />
+                      <span>{{ 'DESC_CONTACT' | translate }} {{ phone }} - {{ email }}</span>
+                      <br /><br />
+                      <md-radio-group>
+                        <br />
+                        <label>{{ 'PAYMENT' | translate }}?</label>
+                        <br /><br />
+                        <md-radio-button value="credito" ng-required="true" class="md-primary">{{ 'CREDIT' | translate }}</md-radio-button>
+                        <md-radio-button value="debito" ng-required="true" class="md-primary">{{ 'DEBIT' | translate }}</md-radio-button>
+                        <md-radio-button value="dinheiro" ng-required="true" class="md-primary">{{ 'MONEY' | translate }}</md-radio-button>
+                      </md-radio-group>
+                      <md-radio-group>
+                        <br />
+                        <label>{{ 'RETURN' | translate }}</label>
+                        <br /><br />
+                        <md-radio-button value="Sim" ng-required="true">{{ 'YES' | translate }}</md-radio-button>
+                        <md-radio-button value="Não" ng-required="true">{{ 'NO' | translate }}</md-radio-button>
+                      </md-radio-group>
+                    </div>
+                  </div>
+                  <div layout="column" layout-wrap flex="100">
+                    <div flex="100">
+                      <span>{{ 'PROGRESS_ORDER' | translate }}</span><br /><br />
+                      <span>{{ 'CALC' | translate }}</span> <br /><br />
 
-									    <div flex="100">
-						      		 	
-										      <label>{{ 'VALUE_ORDER' | translate }}: </label><br />
-										      <input value="{{ valueSnack | currency: 'R$'}}" type="text" disabled>
-										    
-										  </div>
+                      <div flex="100">
+                        
+                          <label>{{ 'VALUE_ORDER' | translate }}: </label><br />
+                          <input value="{{ valueSnack | currency: 'R$'}}" type="text" disabled>
+                        
+                      </div>
 
-										  <div flex="100">
-						      		 	
-										      <label>{{ 'PERSON_QUANTITY' | translate }}: </label><br />
-										      <input  type="number" ng-change="calcValuePessoa(valueSnack, qtdPessoa)" ng-model="qtdPessoa">
-										    
-										  </div>
+                      <div flex="100">
+                        
+                          <label>{{ 'PERSON_QUANTITY' | translate }}: </label><br />
+                          <input  type="number" ng-change="calcValuePessoa(valueSnack, qtdPessoa)" ng-model="qtdPessoa">
+                        
+                      </div>
 
-										  <div flex="100">
-						      		 	
-										      <label>{{ 'VALUE_PERSON' | translate }}: </label><br />
-										      <input value="{{ valorPessoa | currency: 'R$'}}" type="text" disabled>
-										    
-										  </div>
+                      <div flex="100">
+                        
+                          <label>{{ 'VALUE_PERSON' | translate }}: </label><br />
+                          <input value="{{ valorPessoa | currency: 'R$'}}" type="text" disabled>
+                        
+                      </div>
 
-										  <!-- <md-button class="md-primary md-raised" ng-click="calcValuePessoa(valueSnack, qtdPessoa)">
-									      Calcular
-									    </md-button> -->
-										  
+                      <!-- <md-button class="md-primary md-raised" ng-click="calcValuePessoa(valueSnack, qtdPessoa)">
+                        Calcular
+                      </md-button> -->
+                      
 
-										  <div flex="100">
-						      		 	<span ng-repeat="person in persons track by $index">
-						      		 		<br />
-										      <label>{{ 'PERSON' | translate }}</label><br />
-										      <!-- <md-icon md-svg-src="img/user.svg" class="name"></md-icon> -->
-										      <input type="text" ng-change="calcPercentPessoa(valueSnack, person.value)" ng-model="person.value">R$<br />
-										      <input type="text" ng-change="calcPercentPessoa(valueSnack, person.percent)" ng-model="person.percent">%
-										      <br />
-						      		 	</span>
-										    
-										  </div>
+                      <div flex="100">
+                        <span ng-repeat="person in persons track by $index">
+                          <br />
+                          <label>{{ 'PERSON' | translate }}</label><br />
+                          <!-- <md-icon md-svg-src="img/user.svg" class="name"></md-icon> -->
+                          <input type="text" ng-change="calcPercentPessoa(valueSnack, person.value)" ng-model="person.value">R$<br />
+                          <input type="text" ng-change="calcPercentPessoa(valueSnack, person.percent)" ng-model="person.percent">%
+                          <br />
+                        </span>
+                        
+                      </div>
 
-									  </div>
-									</div>
-					      </div>
-					    </md-dialog-content>
-
-					    <md-dialog-actions layout="row">
-					      <md-button ng-click="location.reload()">
-					        {{ 'RELOAD' | translate }}
-					      </md-button>
-					    </md-dialog-actions>
-					  </form>
-					</md-dialog>
-				</div>
-			</div>
+                    </div>
+                  </div>
+                </div>
+              </md-dialog-content>
+            </form>
+          </md-dialog>
+        </div>
+      </div>
 
       <div layout="row" flex="noshrink" layout-align="center center">
         <div id="license-footer" flex>
