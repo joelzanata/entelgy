@@ -87,19 +87,26 @@
           </h2>
         </div>
 	       <div class="md-toolbar-item docs-tools" layout="row">
-	      	<md-button class="md-primary md-raised" ng-click="changeTranslate('pt')" >
-	      			{{ 'BT_LING_PT' | translate }}
-	      	</md-button>
+		       	<span ng-click="changeTranslate('pt')">
+		      		<img src="img/br.png" alt="{{ 'BT_LING_PT' | translate }}" class="iconLanguage">
+		       	</span>
+		       	<span ng-click="changeTranslate('en')">
+		      		<img src="img/usa.png" alt="{{'BT_LING_EN' | translate }}" class="iconLanguage">
+		       	</span>
+		      	<!-- <md-button class="md-primary md-raised" ng-click="changeTranslate('pt')" >
+		      			{{ 'BT_LING_PT' | translate }}
+		      	</md-button>
 
-	      	<md-button class="md-primary md-raised" ng-click="changeTranslate('en')">
-					      {{'BT_LING_EN' | translate }}
-					    </md-button>
-				</div>
+		      	<md-button class="md-primary md-raised" ng-click="changeTranslate('en')">
+			      {{'BT_LING_EN' | translate }}
+			    </md-button> -->
+			</div>
       </div>
       
     </md-toolbar>
 
     <md-content md-scroll-y layout="column" flex>
+    <form name="validatorForm">
       <div layout-padding flex="noshrink" class="material-ng-view">
       	<div layout="row" layout-wrap flex="100">
 	      	<div layout="row" layout-wrap flex="100">
@@ -108,18 +115,25 @@
 	      			<h2>{{ 'PERSONAL_DATA' | translate }}</h2>
 	      		</div>
 	      		<div flex="50">
-	      		 <md-input-container class="md-icon-float md-block">
-					      <label>{{ 'NAME' | translate }}</label>
-					      <!-- <md-icon md-svg-src="img/user.svg" class="name"></md-icon> -->
-					      <input ng-model="name" type="text" ng-required="true">
-					    </md-input-container>
-					  </div>
-					  <div flex="50">
-					    <md-input-container md-no-float class="md-icon-float md-block">
-					    	<label>{{ 'ADRESS' | translate }}</label>
-					      <!-- <md-icon md-svg-src="img/icons/ic_place_24px.svg" style="display:inline-block;"></md-icon> -->
-					      <input ng-model="user.address" type="text" ng-required="true">
-					    </md-input-container>
+	      			<md-input-container class="md-block">
+						        <label>{{ 'NAME' | translate }}</label>
+						        <input md-maxlength="75" required md-no-asterisk name="name" ng-model="name" >
+						        <div ng-messages="validatorForm.name.$error">
+						          <div ng-message="required">{{ 'MSG01' | translate }}</div>
+						          <div ng-message="md-maxlength">{{ 'MSG01' | translate }}</div>
+						        </div>
+						      </md-input-container>
+						  </div>
+						  <div flex="50">
+						  	<md-input-container class="md-block">
+					        <label>{{ 'ADRESS' | translate }}</label>
+					        <input md-maxlength="100" required md-no-asterisk name="address" ng-model="address" >
+					        <div ng-messages="validatorForm.address.$error">
+					          <div ng-message="required">{{ 'MSG01' | translate }}</div>
+					          <div ng-message="md-maxlength">{{ 'MSG01' | translate }}</div>
+					        </div>
+					      </md-input-container>
+	      		 
 					  </div>
 					  <div flex="50"> 
 					    <md-input-container md-no-float class="md-block">
@@ -177,17 +191,18 @@
 					    </md-input-container>
 
 
-								<md-input-container class="md-block" flex-gt-sm>
-			            <label>{{ 'TYPE_BREAD' | translate }}:</label>
+						<md-input-container class="md-block" flex-gt-sm>
+			            <label>{{ 'TYPE_BREAD' | translate }}</label>
 			            <md-select ng-model="data.bread" id="tipopao" ng-required="true" >
 			              <md-option ng-repeat="bread in breads" ng-click="calcValueIngredientes('bread', bread)" value="{{ bread.nome }}">
 			                {{ bread.nome }}
 			              </md-option>
 			            </md-select>
+
 			          </md-input-container>
 
 			          <md-input-container class="md-block" flex-gt-sm>
-			            <label>{{ 'TYPE_CHEESE' | translate }}:</label>
+			            <label>{{ 'TYPE_CHEESE' | translate }}</label>
 			            <md-select ng-model="data.cheese">
 			              <md-option ng-repeat="cheese in cheeses" ng-click="calcValueIngredientes('cheese', cheese)" value="{{ cheese.nome }}">
 			                {{ cheese.nome }}
@@ -196,7 +211,7 @@
 			          </md-input-container>
 
 			          <md-input-container class="md-block" flex-gt-sm>
-			            <label>{{ 'FILLING' | translate }}:</label>
+			            <label>{{ 'FILLING' | translate }}</label>
 			            <md-select ng-model="data.filling" >
 			              <md-option ng-repeat="filling in fillings" value="{{ filling.nome }}" ng-click="calcValueIngredientes('filling', filling)">
 			                {{ filling.nome }}
@@ -211,7 +226,8 @@
 									<br />
 							 		<label>{{ 'SALAD' | translate }}:</label>
 							 		<br /><br />
-						      <md-radio-button value="{{ salad.nome }}" ng-required="true" ng-repeat=" salad in salads" class="md-primary" ng-click="calcValueIngredientes('salad', salad)">{{ salad.nome }}</md-radio-button>
+						      <md-radio-button value="{{ salad.nome }}" ng-required="true" ng-repeat=" salad in salads" class="md-primary" ng-click="calcValueIngredientes('salad', salad)">{{ salad.nome }}
+						    </md-radio-button>
 
 						    </md-radio-group>
 						    <!-- <label>Salada:</label>
@@ -261,7 +277,12 @@
 				  <div flex="50">
 				  	<label>{{ 'SNACK_SELECT' | translate }}</label>
 				    <ol>
-							<li ng-repeat="item in list track by $index" ng-click="remoreItemList($index, item)"><span>{{ item.snack }} - ({{ item.valor | currency: 'R$' }})</span></li>
+							<li ng-repeat="item in list track by $index">
+								<span>{{ item.snack }} - ({{ item.valor | currency: 'R$' }})</span>
+								<span ng-click="remoreItemList($index, item)">
+						      		<img src="img/delete.svg" class="icon">
+						       	</span>
+							</li>
 						</ol>
 
 						<md-input-container class="md-icon-float md-icon-right md-block" flex-gt-sm="100">
@@ -277,6 +298,7 @@
 				  </div>
 				</div>
       </div>
+    </form>
 
       <div style="visibility: hidden">
 			  <div class="md-dialog-container" id="DetailOrder">
@@ -298,7 +320,7 @@
 					        	<h2>{{ 'DETAIL' | translate }}</h2>
 					        </div>
 					        <div layout="row" layout-wrap flex="100">
-									  <div flex="50">
+									  <div flex="100">
 									    {{ 'HELLO' | translate }} {{ name }}
 									    <br /><br />
 									    <span ng-model="valueSnack">{{ 'DESC_VALUE_ORDER' | translate }} {{ valueSnack | currency: 'R$'}}</span>
@@ -320,28 +342,28 @@
 								    	</md-radio-group>
 									  </div>
 									</div>
-									<div layout="column" layout-wrap flex="50">
-									  <div flex="50">
+									<div layout="column" layout-wrap flex="100">
+									  <div flex="100">
 									    <span>{{ 'PROGRESS_ORDER' | translate }}</span><br /><br />
 									    <span>{{ 'CALC' | translate }}</span> <br /><br />
 
 									    <div flex="100">
 						      		 	
-										      <label>{{ 'VALUE_ORDER' | translate }}: </label>
+										      <label>{{ 'VALUE_ORDER' | translate }}: </label><br />
 										      <input value="{{ valueSnack | currency: 'R$'}}" type="text" disabled>
 										    
 										  </div>
 
 										  <div flex="100">
 						      		 	
-										      <label>{{ 'PERSON_QUANTITY' | translate }}: </label>
+										      <label>{{ 'PERSON_QUANTITY' | translate }}: </label><br />
 										      <input  type="number" ng-change="calcValuePessoa(valueSnack, qtdPessoa)" ng-model="qtdPessoa">
 										    
 										  </div>
 
 										  <div flex="100">
 						      		 	
-										      <label>{{ 'VALUE_PERSON' | translate }}: </label>
+										      <label>{{ 'VALUE_PERSON' | translate }}: </label><br />
 										      <input value="{{ valorPessoa | currency: 'R$'}}" type="text" disabled>
 										    
 										  </div>
@@ -353,12 +375,12 @@
 
 										  <div flex="100">
 						      		 	<span ng-repeat="person in persons track by $index">
-										      <label>{{ 'PERSON' | translate }}</label>
+						      		 		<br />
+										      <label>{{ 'PERSON' | translate }}</label><br />
 										      <!-- <md-icon md-svg-src="img/user.svg" class="name"></md-icon> -->
-										      R$<input type="text" ng-change="calcPercentPessoa(valueSnack, person.value)" ng-model="person.value"> - 
+										      <input type="text" ng-change="calcPercentPessoa(valueSnack, person.value)" ng-model="person.value">R$<br />
 										      <input type="text" ng-change="calcPercentPessoa(valueSnack, person.percent)" ng-model="person.percent">%
-
-										      
+										      <br />
 						      		 	</span>
 										    
 										  </div>

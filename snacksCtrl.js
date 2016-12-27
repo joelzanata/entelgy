@@ -53,7 +53,7 @@ angular
 	    'BT_LING_EN'			: 'Inglês',
 
 	    'MSG01'						: 'Este campo é obrigatório.',
-	    'MSG01'						: 'Ao menos um lanche deve ser selecionado para o pedido.'
+	    'MSG02'						: 'Ao menos um lanche deve ser selecionado para o pedido.'
 
 
 	    
@@ -111,10 +111,10 @@ angular
 	    'BT_LING_EN'			: 'English',
 
 	    'MSG01'						: 'This fields is required.',
-	    'MSG01'						: 'At least one snack must be selected for the order.'
+	    'MSG02'						: 'At least one snack must be selected for the order.'
 	  });
 	 
-	  $translateProvider.preferredLanguage('en');
+	  $translateProvider.preferredLanguage('pt');
 	}])
 
 
@@ -122,6 +122,14 @@ angular
 		$scope.status = '  ';
   	$scope.customFullscreen = false;
 
+  	$scope.validator = {
+	    description: '{{ MSG01 | translate }}',
+	  };
+
+	  /*$scope.doSubmit = function () {
+    			
+  	};
+*/
 		var mappingCategoria = {
 			"Tipo de pão" : "bread",
 			"Queijo"      : "cheese",
